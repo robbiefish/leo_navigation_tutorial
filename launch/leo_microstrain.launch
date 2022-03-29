@@ -1,0 +1,12 @@
+<launch>
+  <!-- Static transform publisher between map and odom -->  
+  <node pkg="tf" type="static_transform_publisher" name="static_map_broadcaster" args="0 0 0 0 0 0 map odom 1000" />
+
+  <!-- Navigation packages -->
+  <include file="$(find leo_navigation)/launch/navigation.launch"/>
+
+  <!-- Map server -->
+  <include file="$(find leo_navigation)/launch/amcl.launch">
+    <arg name="map_file" value="$(find leo_navigation)/maps/blank_map.yaml" />
+  </include>
+</launch>

@@ -6,10 +6,12 @@
         type="map_server"
         args="$(arg map_file)"/>
 
+<!--
   <node name="amcl"
         pkg="amcl"
         type="amcl"
         clear_params="true">
     <rosparam command="load" file="$(find leo_navigation)/config/amcl.yaml"/>
   </node>
+-->
 </launch>

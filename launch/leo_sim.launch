@@ -1,0 +1,4 @@
+<launch>
+  <include file="$(find leo_gazebo)/launch/leo_gazebo.launch" />
+  <include file="$(find leo_navigation)/launch/odometry.launch" />
+</launch>

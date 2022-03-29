@@ -1,12 +1,14 @@
 <launch>
   <arg name="three_d" default="false"/>
 
+<!--
   <node name="message_filter" 
         pkg="leo_navigation" 
         type="message_filter">
     <rosparam command="load" 
               file="$(find leo_navigation)/config/message_filter.yaml"/>
   </node>
+-->
 
   <node if="$(arg three_d)"
         name="imu_filter_node" 
